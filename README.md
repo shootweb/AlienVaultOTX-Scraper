@@ -34,6 +34,8 @@ max_results = 1000       # Max number of pulses to fetch per term
 ```
 
 Get your OTX API key from: `https://otx.alienvault.com/api`
+<br>
+(You need an account for this!)
 
 ## Usage
 
