@@ -7,10 +7,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # === CONFIGURATION ===
 API_KEY = 'YOUR_API_KEY_GOE_HERE'
-MAX_INDICATORS = 300000 #Hardcoded indicator limit per search term (you'll need this!).
-MAX_WORKERS = 30 #Set to 10-20 for slower computers.
-RATE_LIMIT_DELAY = 0.1  # Reduced sleep for faster iteration
-max_results=1000 #Hardcoded page limit
+MAX_INDICATORS = 300000  # Max number of indicators to collect per search term
+MAX_WORKERS = 30         # ThreadPool concurrency (lower this if you experience slowdowns)
+RATE_LIMIT_DELAY = 0.1   # Delay between API calls
+max_results = 1000       # Max number of pulses to fetch per term (a pulse may contain 50 or 5000 indicators, you never know!)
 
 # === FUNCTIONS ===
 def fetch_pulse_details(otx, pulse):
